@@ -456,7 +456,7 @@ Or
 
 -   VAR(X) = B(X) + W(X).
 
-For PCA, PCoA or MDS we focus on total variance/VAR(X). DAPC allow us to optimize variance between groups/B(X) whilst minimising variance within groups/W(X). It does this with discriminant functions which show differences between groups as best as possible while minimizing variation within clusters.
+For PCA, PCoA or MDS we focus on total variance, VAR(X). DAPC allow us to optimize variance between groups, B(X), whilst minimising variance within groups, W(X). It does this with discriminant functions which show differences between groups as best as possible while minimizing variation within clusters.
 
 DAPC requires prior groups to be defined, therefore one must first identify clusters in the data. This can be done with k-means clustering.
 
