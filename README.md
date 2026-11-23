@@ -1,6 +1,9 @@
 # Potato_canopy_GWAS
 Associated code and data for GWAS analysis of potato canopy traits and yield. Note this is simply a copy of the Potato_canopy_GWAS repo which provides data for the paper based on thesis chapter. This Repo contains additional supplementary tables relevant to thesis chapter but not paper.
 
+### R project file
+[GWAS_project_1.Rproj](https://github.com/JBosan/Potato_canopy_GWAS_teaching_materials/blob/main/GWAS_project_1.Rproj) provides the R project file for all code and data in this repository.
+
 #### BLUEs
 [BLUEs.Rmd](https://github.com/JBosan/Potato_canopy_GWAS_teaching_materials/blob/main/BLUEs.Rmd) and [/BLUEs_output](https://github.com/JBosan/Potato_canopy_GWAS_teaching_materials/tree/main/BLUEs_output) provide the code used to generate the baseline Best Linear Unbiased Estimates for phenotype data and the output of this analysis, respectively.
 
