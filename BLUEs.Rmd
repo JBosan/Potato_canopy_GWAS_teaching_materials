@@ -207,7 +207,7 @@ phenotype %>%
          Yield_Kg) #select info cols + yield trait
 ```
 
-Looking at this the NAs for are in rows 1114 (ID 93) and 1378 (ID 115). 
+Looking at this the NAs for yield are in rows 1114 (ID 93) and 1378 (ID 115). 
 They are also both for Organic, Replicate 2 in 2018. Thus to account for this 
 missing data we will just replace the NAs with Organic, Replicate 1 in 2018 for 
 each variety.
@@ -431,7 +431,7 @@ This is done by setting up a mixed effect model where...
 - Fixed effects = Trait of interest, Genotype (i.e. Trait ~ Genotype)
 - Random effects = Cultivation system (System) and Year
 
-Note that in order for the model to work in lme4 (the package used modelling) 
+Note that in order for the model to work in lme4 (the package used for modelling) 
 we must ensure System, Year and Genotype_ID are set to factors. 
 
 For full data-set (when doing yield_kg trait)
@@ -538,7 +538,7 @@ fixed_effect_model <- lm(Yield_Kg ~ Genotype_ID,
 head(summary(fixed_effect_model)$coefficients,10) 
 ```
 
-This shows at least some cultivars/genotypes have a significant differences in 
+This shows at least some cultivars/genotypes have significant differences in 
 yield.
 
 However, both System (organic vs control) and Year (2016-2018) may need to be
@@ -1134,6 +1134,7 @@ dev.off()
 # Comparison of traits
 
 I.e. how one trait predicts another
+Only done for yield vs max height as an example, can do others if wanted...
 
 ```{r}
 model <- lm(Yield_Kg ~ Max_Max_height_m, data = phenotype_17_18)
