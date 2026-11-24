@@ -54,9 +54,9 @@ These traits are:
 Yield (Kg) was measured in 2016, 17, and 18, whilst the other traits
 were only measured in 2017 and 18.
 
-The data also contains principal components from PCA and the Q-matrix
-for K=3 from the results of STRUCTURE which can be used as covariates in
-the P+K and Q+K methods respectively.
+The data also contains principal components from PCA, the Q-matrix for K=3 
+from the results of STRUCTURE, and the Q-matrix for K=4 from the results of DAPC, 
+which can be used as covariates in the P+K and Q+K methods.
 
 ```{r}
 phenotype <- read.csv(file = "Year_GxE_BLUEs_output/Year_GxE_BLUEs_with_Q_matrices_and_PCs.csv")
@@ -66,10 +66,10 @@ glimpse(phenotype)
 # Missing filtering
 
 Before performing GWAS we need to first filter based on the percentage
-of missing data (i.e. remove data is there is too much missing). This
+of missing data (i.e. remove data if there is too much missing). This
 removes potential bias.
 
-We shall remove SNPs with \>=20% missing data for subsequent analysis.
+We shall remove SNPs with >=20% missing data for subsequent analysis.
 
 ```{r}
 #filter to select data with <20% missing
@@ -676,7 +676,7 @@ GWAS_k_method_bonferroni <-
 
 However, the bonferroni correction may be too conservative as it assumes
 complete independence but LD means some markers are not independent.
-Thus we can use an estimate an effective number of markers instead.
+Thus we can use an estimate of an effective number of markers instead.
 
 ```{r}
 GWAS_k_method_m.eff <- 
@@ -1277,7 +1277,7 @@ write.csv(LD_qtl, "Year_GxE_GWAS_poly_output/K_method/k_method_LD_qtl_m.eff.csv"
 
 ## λGC
 
-λGC or genomic control inflation factor to check effects of population
+λGC or genomic control inflation factor is used to check effects of population
 structure on final GWAS model. Thus we shall use this measure to assess
 the effectiveness of the K-model at controlling for population structure
 effects.
