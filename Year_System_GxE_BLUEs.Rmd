@@ -157,7 +157,7 @@ phenotype %>%
          Yield_Kg) #select info cols + yield trait
 ```
 
-Looking at this the NAs for are in rows 1114 (ID 93) and 1378 (ID 115). 
+Looking at this the NAs for yield are in rows 1114 (ID 93) and 1378 (ID 115). 
 They are also both for Organic, Replicate 2 in 2018. Thus to account for this 
 missing data we will just replace the NAs with Organic, Replicate 1 in 2018 for 
 each variety.
@@ -379,7 +379,7 @@ For the Year_System_GxE BLUEs we shall also add
 - Gene x year as a random effect (Genotype:Year)
 - AND Gene x system as a random effect (Genotype:system)
 
-Note that in order for the model to work in lme4 (the package used modelling) 
+Note that in order for the model to work in lme4 (the package used for modelling) 
 we must ensure System, Year and Genotype_ID are set to factors. 
 
 For full data-set (when doing yield_kg trait)
